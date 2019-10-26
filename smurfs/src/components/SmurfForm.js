@@ -1,28 +1,35 @@
-import React, { useContext, useState } from 'react';
-import { SmurfContext } from '../contexts/SmurfContext';
+import React, { useState } from 'react';
+// import { SmurfContext } from '../contexts/SmurfContext';
 
 function SmurfForm(props) {
-  // const smurf = useContext(SmurfContext);
-  const { addSmurf } = useContext(SmurfContext);
-  const [smurfs, addSmurfs] = useState([])
+  // const smurfer = useContext(SmurfContext);
+  // const { addSmurf } = useContext(SmurfContext);
+  const smurfa = {
+    name: '', 
+    age: '',
+    height: ''
+  }
+
+  const [newSmurf, addNewSmurf] = useState(smurfa)
+  console.log(newSmurf)
 
   const handleInputChange = e => {
-    // e.preventDefault();
-    e.persist();
-    addSmurfs({ [e.target.name]: e.target.value });
+    addNewSmurf({ 
+     ...newSmurf, 
+     [e.target.name]: e.target.value 
+    });
     console.log(e.target.value)
   };
 
-  addSmurf = smurfs => {
-
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.addSmurf(newSmurf, props.smurf);
   }
-  // handleInputChange = e => {
-  //   this.setState({ [e.target.name]: e.target.value });
-  // };
+ 
 
     return (
       <div className="SmurfForm">
-        <form onSubmit={props.addSmurf}>
+        <form onSubmit={handleSubmit}>
           <p>
             <input
               onChange={handleInputChange}

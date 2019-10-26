@@ -40,9 +40,14 @@ function App(props) {
 
     .catch(err => console.log(err))
   }
+
+  const smurfer = {
+    addSmurf, 
+    smurf
+  }
   
   return (
-    <SmurfContext.Provider value={{ smurf, addSmurf }}> 
+    <SmurfContext.Provider value={ smurfer }> 
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
 
@@ -50,6 +55,8 @@ function App(props) {
           path='/'
           component={SmurfForm}
         />
+
+        {/*<SmurfForm addSmurf={addSmurf} />*/}
 
         <Route 
           exact
