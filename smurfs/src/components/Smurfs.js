@@ -6,7 +6,7 @@ import Smurf from './Smurf';
 
 const Smurfs = () => {
 	const { smurf } = useContext(SmurfContext);
-	console.log(smurf[0]);
+	// console.log(smurf[0]);
 	return (
 		<div className="smurf-container">
 			{smurf.map(item => (

@@ -11,7 +11,7 @@ function SmurfForm(props) {
   }
 
   const [newSmurf, addNewSmurf] = useState(smurfa)
-  console.log(newSmurf)
+  // console.log(newSmurf)
 
   const handleInputChange = e => {
     addNewSmurf({ 
@@ -28,7 +28,7 @@ function SmurfForm(props) {
  
 
     return (
-      <div className="SmurfForm">
+      <div className="smurfForm">
         <form onSubmit={handleSubmit}>
           <p>
             <input

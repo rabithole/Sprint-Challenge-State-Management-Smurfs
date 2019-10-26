@@ -9,9 +9,6 @@ import "./App.css";
 
 function App(props) {
   const [smurf, setSmurfs] = useState([]);
-  // const [newSmurf, smurfAdd] = useState([]);
-
-  console.log(smurf)
 
   useEffect(() => {
     fetchSmurfs();
@@ -42,21 +39,21 @@ function App(props) {
   }
 
   const smurfer = {
-    addSmurf, 
+    setSmurfs, 
     smurf
   }
   
   return (
     <SmurfContext.Provider value={ smurfer }> 
       <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
+        <h1>SMURFS! 2.0 W/ Context API</h1>
 
-         <Route 
+        {/* <Route 
           path='/'
           component={SmurfForm}
-        />
+        />*/}
 
-        {/*<SmurfForm addSmurf={addSmurf} />*/}
+        <SmurfForm addSmurf={addSmurf} />
 
         <Route 
           exact
