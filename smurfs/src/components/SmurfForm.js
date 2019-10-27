@@ -13,9 +13,9 @@ function SmurfForm(props) {
     console.log(e.target.value)
   };
 
-  addSmurf = smurfs => {
+  // addSmurf = smurfs => {
 
-  }
+  // }
   // handleInputChange = e => {
   //   this.setState({ [e.target.name]: e.target.value });
   // };
