@@ -21,24 +21,15 @@ function SmurfForm(props) {
     console.log(e.target.value)
   };
 
-// <<<<<<< HEAD
-  // addSmurf = smurfs => {
-
-  // }
-  // handleInputChange = e => {
-  //   this.setState({ [e.target.name]: e.target.value });
-  // };
-// =======
   const handleSubmit = e => {
     e.preventDefault();
     props.addSmurf(newSmurf, props.smurf);
+    document.getElementById('resetForm').reset();
   }
- 
-// >>>>>>> e82cec7964e70afa58c1b9a43bc5eaa55448890c
 
     return (
       <div className="smurfForm">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} id='resetForm'>
           <p>
             <input
               onChange={handleInputChange}
