@@ -2,27 +2,21 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
 .App-title {
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.smurf-container {
+ 
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.smurf, .smurfForm {
+  background-color: blue;
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  border: solid 2px black;
+  /*text-shadow: 1px 1px 1px white;*/
+  font-weight: 900;
+  border-radius: 5px;
 }
